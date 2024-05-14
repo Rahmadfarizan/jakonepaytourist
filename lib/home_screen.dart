@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:jakonepaytourist/notched_bottom_bar.dart';
+import 'package:jakonepaytourist/qr_view_example.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -34,7 +35,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ))
         .toList();
     return Scaffold(
-      
       appBar: AppBar(
           surfaceTintColor: Colors.transparent,
           leadingWidth: MediaQuery.of(context).size.width,
@@ -812,10 +812,13 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           FloatingActionButton(
               shape: const CircleBorder(),
-              backgroundColor: Color(0xFFFF4747),
-              onPressed: () {},
+              backgroundColor: const Color(0xFFFF4747),
+              onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const QRViewExample())),
               child: Container(
-                padding: EdgeInsets.all(4),
+                padding: const EdgeInsets.all(4),
                 height: 50,
                 width: 50,
                 child: Image.asset('assets/images/qris.png'),
