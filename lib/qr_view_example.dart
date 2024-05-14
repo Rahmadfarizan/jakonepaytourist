@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:jakonepaytourist/home_screen.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
 class QRViewExample extends StatefulWidget {
@@ -61,7 +62,8 @@ class _QRViewExampleState extends State<QRViewExample> {
       setState(() {
         result = scanData;
       });
-      Navigator.pop(context);
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const HomeScreen()));
     });
   }
 
