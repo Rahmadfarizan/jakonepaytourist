@@ -12,7 +12,6 @@ class QRViewExample extends StatefulWidget {
 }
 
 class _QRViewExampleState extends State<QRViewExample> {
-  Barcode? result;
   QRViewController? controller;
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
 
@@ -59,9 +58,7 @@ class _QRViewExampleState extends State<QRViewExample> {
       this.controller = controller;
     });
     controller.scannedDataStream.listen((scanData) {
-      setState(() {
-        result = scanData;
-      });
+      controller.pauseCamera();
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => const HomeScreen()));
     });
