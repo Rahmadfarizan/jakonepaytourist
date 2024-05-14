@@ -56,7 +56,6 @@ class _MyHomePageState extends State<MyHomePage> {
   ];
 
   final CarouselController _controller = CarouselController();
-  List<int> list = [1, 2, 3, 4, 5];
   int _current = 0;
   @override
   Widget build(BuildContext context) {

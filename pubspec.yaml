@@ -75,6 +75,15 @@ flutter:
     - assets/images/task.png
     - assets/images/notifications.png
     - assets/images/user_image.png
+    - assets/images/menu1.png
+    - assets/images/menu2.png
+    - assets/images/menu3.png
+    - assets/images/menu4.png
+    - assets/images/banner.png
+    - assets/images/landmark.png
+    - assets/images/event1.png
+    - assets/images/event2.png
+    - assets/images/maps.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
